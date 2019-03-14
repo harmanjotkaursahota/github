@@ -1,0 +1,12 @@
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\bin\Debug\Car_Inventory.exe.config
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\bin\Debug\Car_Inventory.exe
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\bin\Debug\Car_Inventory.pdb
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\bin\Debug\Car_Inventory.xml
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.vbprojAssemblyReference.cache
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.frmCarInventory.resources
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.Resources.resources
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.vbproj.GenerateResource.cache
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.vbproj.CoreCompileInputs.cache
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.exe
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.xml
+H:\SEM 2\Assignments\NETD\GITHUB\Car_Inventory\Car_Inventory\obj\Debug\Car_Inventory.pdb
