@@ -38,7 +38,7 @@ Partial Class frmCarInventory
         Me.colModel = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.colYear = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.colPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.lbResult = New System.Windows.Forms.Label()
+        Me.lblResult = New System.Windows.Forms.Label()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
@@ -52,6 +52,7 @@ Partial Class frmCarInventory
         Me.txtModel.Name = "txtModel"
         Me.txtModel.Size = New System.Drawing.Size(156, 22)
         Me.txtModel.TabIndex = 3
+        Me.carInventoryTips.SetToolTip(Me.txtModel, "Type the model of the car here.")
         '
         'lblMake
         '
@@ -79,6 +80,7 @@ Partial Class frmCarInventory
         Me.cmbMake.Name = "cmbMake"
         Me.cmbMake.Size = New System.Drawing.Size(156, 24)
         Me.cmbMake.TabIndex = 1
+        Me.carInventoryTips.SetToolTip(Me.cmbMake, "Select the car's make")
         '
         'lblYear
         '
@@ -92,11 +94,12 @@ Partial Class frmCarInventory
         'cmbYears
         '
         Me.cmbYears.FormattingEnabled = True
-        Me.cmbYears.Items.AddRange(New Object() {"2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"})
+        Me.cmbYears.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"})
         Me.cmbYears.Location = New System.Drawing.Point(111, 68)
         Me.cmbYears.Name = "cmbYears"
         Me.cmbYears.Size = New System.Drawing.Size(156, 24)
         Me.cmbYears.TabIndex = 5
+        Me.carInventoryTips.SetToolTip(Me.cmbYears, "Select the year for car")
         '
         'lblPrice
         '
@@ -113,6 +116,7 @@ Partial Class frmCarInventory
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(156, 22)
         Me.txtPrice.TabIndex = 7
+        Me.carInventoryTips.SetToolTip(Me.txtPrice, "Type the price of the car here." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
         '
         'lvwCars
         '
@@ -124,18 +128,21 @@ Partial Class frmCarInventory
         Me.lvwCars.Margin = New System.Windows.Forms.Padding(4)
         Me.lvwCars.MultiSelect = False
         Me.lvwCars.Name = "lvwCars"
-        Me.lvwCars.Size = New System.Drawing.Size(489, 314)
+        Me.lvwCars.Size = New System.Drawing.Size(452, 273)
         Me.lvwCars.TabIndex = 10
+        Me.carInventoryTips.SetToolTip(Me.lvwCars, "Select a car to modify.")
         Me.lvwCars.UseCompatibleStateImageBehavior = False
         Me.lvwCars.View = System.Windows.Forms.View.Details
         '
         'colNew
         '
         Me.colNew.Text = "New"
+        Me.colNew.Width = 40
         '
         'colID
         '
         Me.colID.Text = "ID"
+        Me.colID.Width = 30
         '
         'colMake
         '
@@ -144,73 +151,83 @@ Partial Class frmCarInventory
         'colModel
         '
         Me.colModel.Text = "Model"
+        Me.colModel.Width = 80
         '
         'colYear
         '
         Me.colYear.Text = "Year"
+        Me.colYear.Width = 50
         '
         'colPrice
         '
         Me.colPrice.Text = "Price"
         '
-        'lbResult
+        'lblResult
         '
-        Me.lbResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lbResult.Location = New System.Drawing.Point(13, 481)
-        Me.lbResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbResult.Name = "lbResult"
-        Me.lbResult.Size = New System.Drawing.Size(489, 101)
-        Me.lbResult.TabIndex = 11
+        Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblResult.Location = New System.Drawing.Point(13, 440)
+        Me.lblResult.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(452, 133)
+        Me.lblResult.TabIndex = 11
+        Me.carInventoryTips.SetToolTip(Me.lblResult, "Success or Error message will appear here.")
         '
         'btnEnter
         '
-        Me.btnEnter.Location = New System.Drawing.Point(147, 596)
+        Me.btnEnter.Location = New System.Drawing.Point(183, 590)
         Me.btnEnter.Name = "btnEnter"
         Me.btnEnter.Size = New System.Drawing.Size(84, 31)
         Me.btnEnter.TabIndex = 12
         Me.btnEnter.Text = "&Enter"
+        Me.carInventoryTips.SetToolTip(Me.btnEnter, "Click to add a car.")
         Me.btnEnter.UseVisualStyleBackColor = True
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(259, 596)
+        Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnReset.Location = New System.Drawing.Point(282, 590)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(84, 31)
         Me.btnReset.TabIndex = 13
         Me.btnReset.Text = "&Reset"
+        Me.carInventoryTips.SetToolTip(Me.btnReset, "Click to reset the screen.")
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(371, 596)
+        Me.btnExit.Location = New System.Drawing.Point(381, 590)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(84, 31)
         Me.btnExit.TabIndex = 14
         Me.btnExit.Text = "E&xit"
+        Me.carInventoryTips.SetToolTip(Me.btnExit, "Click to exit the application.")
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'chkNew
         '
         Me.chkNew.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkNew.Location = New System.Drawing.Point(39, 125)
+        Me.chkNew.Location = New System.Drawing.Point(28, 127)
         Me.chkNew.Margin = New System.Windows.Forms.Padding(4)
         Me.chkNew.Name = "chkNew"
-        Me.chkNew.Size = New System.Drawing.Size(89, 30)
+        Me.chkNew.Size = New System.Drawing.Size(99, 30)
         Me.chkNew.TabIndex = 15
         Me.chkNew.Text = "&New:"
         Me.chkNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.carInventoryTips.SetToolTip(Me.chkNew, "Check to make the car a new car.")
         Me.chkNew.UseVisualStyleBackColor = True
         '
         'frmCarInventory
         '
+        Me.AcceptButton = Me.btnEnter
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(515, 631)
+        Me.CancelButton = Me.btnReset
+        Me.ClientSize = New System.Drawing.Size(473, 629)
         Me.Controls.Add(Me.chkNew)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnEnter)
-        Me.Controls.Add(Me.lbResult)
+        Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.lvwCars)
         Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.lblPrice)
@@ -245,7 +262,7 @@ Partial Class frmCarInventory
     Friend WithEvents colModel As ColumnHeader
     Friend WithEvents colYear As ColumnHeader
     Friend WithEvents colPrice As ColumnHeader
-    Friend WithEvents lbResult As Label
+    Friend WithEvents lblResult As Label
     Friend WithEvents btnEnter As Button
     Friend WithEvents btnReset As Button
     Friend WithEvents btnExit As Button
